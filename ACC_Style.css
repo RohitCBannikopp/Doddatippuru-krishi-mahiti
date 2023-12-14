@@ -89,16 +89,21 @@ main{
 .college_name {
     color: white;
     text-shadow: 4px 1px 2px gray;
-    font-size: 2.5em;
+    font-size: 2.2em;
     font-family: cursive;
 }
 
 .university_name {
     color: rgb(250, 246, 248);
     text-shadow: 4px 1px 2px gray;
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-family: cursive;
     float: right;
+}
+.groupPhoto {
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 50%;
 }
 
 .content-wrapper {
@@ -175,6 +180,11 @@ footer {
         display: flex;
         justify-content: center;
         flex-direction: column;
+        padding-left: 0;
+        padding: 10px;
+    }
+    .navigation-bar ul li{
+        padding: 10px;
     }
 
     .menu_icon {
@@ -191,6 +201,10 @@ footer {
     .content-wraper-2 {
         display: block;
         left: auto;
+    }
+    .groupPhoto {
+        max-width: 380px;
+        border-radius: 50%;
     }
    
 }
