@@ -1,8 +1,8 @@
 body {
-    font-family: sans-serif;
     margin: 0;
     padding: 0;
-    background-color: bisque;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.5) 0%, rgba(173, 216, 230, 0.5) 100%);
+    font-family: 'Arial', sans-serif;
 }
 
 header {
@@ -12,18 +12,26 @@ header {
     display: flex;
     justify-content: space-between;
     position: fixed;
+    top: 0;
     width: 100%;
 }
 
-main{
+/* main {
+
     display: flex;
     justify-content: center;
-}
+} */
 
 .logo {
+    font-size: 2.2em;
+    font-weight: 1000;
     border-radius: 15px;
-    width: 200px;
     height: 60px;
+    background: linear-gradient(to bottom right,
+            violet, rgb(239, 239, 0), rgb(2, 255, 2), rgb(146, 3, 249));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .menu_icon {
@@ -68,38 +76,56 @@ main{
 }
 
 .cover-image {
-    width: 100%;
+    max-height: 60vw;
+    width: 50%;
     height: auto;
     margin-top: 60px;
-
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .cover_image_cont {
+    position: relative;
     width: 100%;
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
 }
 
+.Coverimages-cont img {
+    width: 100%;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+}
+
+.Coverimages-cont img:not(:first-child) {
+    opacity: 0;
+}
+
 .header {
     position: absolute;
     top: 300px;
+
+    text-align: center;
+    color: white;
 }
 
 .college_name {
     color: white;
     text-shadow: 4px 1px 2px gray;
     font-size: 2.2em;
-    font-family: cursive;
+    font: 700 normal 2.5em 'tahoma';
+    text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
 }
 
-.university_name {
+/* .university_name {
     color: rgb(250, 246, 248);
     text-shadow: 4px 1px 2px gray;
     font-size: 1.3em;
     font-family: cursive;
     float: right;
-}
+} */
 .groupPhoto {
     max-width: 500px;
     max-height: 500px;
@@ -110,39 +136,84 @@ main{
     display: flex;
     justify-content: space-between;
     max-width: 800px;
+    margin-top: 70vw;
+    margin-right: 30px;
+    margin-left: 30px;
+    border-radius: 10px;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+
+.content-wrapper2 {
+    margin: 20px;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+}
+
+.content-wrapper2 h3 {
+    color: rgb(246, 145, 13);
+}
+
+.content-wrapper2 ol {
+    background: linear-gradient(to bottom right,
+            violet, rgb(124, 124, 27), indigo, blue, green, orange, red);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
 .content-wraper-2 {
     position: absolute;
     top: 80px;
     left: 15px;
     display: flex;
-    
+
 }
+
 .content-wraper-2 a {
     text-decoration: none;
 }
+
 .item-desc {
     color: gray;
 }
-.info-item{
+
+.info-item {
     width: 200px;
     margin: 20px;
 }
+
 .info-item img {
     width: 150px;
     height: 150px;
 }
 
+.welcome-message h2 {
+    color: rgb(240, 136, 8);
+}
+
 .welcome-message {
     flex: 2;
-    padding: 20px;
+    padding: 10px;
+    background: linear-gradient(to bottom right,
+            violet, yellow, indigo, blue, green, orange, red);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
+
 
 .quick-links {
     flex: 1;
-    margin-left: 20px;
+    margin: 20px;
+    display: inline-block;
     padding: 20px;
     background-color: bisque;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     color: rgb(87, 170, 170);
     border-radius: 5px;
 }
@@ -157,6 +228,7 @@ main{
 }
 
 footer {
+    bottom: 30px;
     background-color: #63666A;
     color: white;
     padding: 10px;
@@ -183,7 +255,8 @@ footer {
         padding-left: 0;
         padding: 10px;
     }
-    .navigation-bar ul li{
+
+    .navigation-bar ul li {
         padding: 10px;
     }
 
@@ -192,21 +265,27 @@ footer {
     }
 
     .header {
-        top: 150px;
+        top: 120px;
     }
 
     .content-wrapper {
         display: block;
     }
+
     .content-wraper-2 {
         display: block;
         left: auto;
     }
+
     .groupPhoto {
         max-width: 380px;
         border-radius: 50%;
     }
-   
+
+}
+.flex_cen_cls {
+    display: flex;
+    justify-content: center;
 }
 
 .show {
